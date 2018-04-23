@@ -1,0 +1,312 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* custom */
+a {
+  color: #7e8c8d;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+}
+li {
+  list-style: none;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+html,
+body {
+  width: 100%;
+}
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#warp {
+  height: 100%;
+  font-size: 0;
+  background: #383838;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+#warp .control {
+  min-width: 600px;
+  height: 25px;
+  background: #2A2A2A;
+  position: relative;
+}
+#warp .control .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 55px;
+  height: 25px;
+}
+#warp .control .btn > span {
+  display: inline-block;
+  width: 9px;
+  height: 11px;
+  background: url(../img/icon.png) no-repeat;
+  margin-top: 7px;
+}
+#warp .control .btn > span:nth-child(1) {
+  background-position: 0 -23px;
+  margin: 0 10px;
+}
+#warp .control .btn > span:nth-child(1).active {
+  background-position: 0 -11px;
+}
+#warp .control > .progress {
+  height: 100%;
+  margin: 0 230px 0 55px;
+  position: relative;
+}
+#warp .control > .progress .wrap {
+  width: 100%;
+  height: 3px;
+  background: #7e8c8d;
+  margin-top: 11px;
+  position: absolute;
+}
+#warp .control > .progress .wrap .inner {
+  position: absolute;
+  width: 9px;
+  height: 7px;
+  border-radius: 30%;
+  background: yellow;
+  margin-top: -2px;
+}
+#warp .control > .progress .dropbtn {
+  width: 0px;
+  height: 3px;
+  margin-top: 11px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: deeppink;
+}
+#warp .control .other {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 230px;
+  height: 25px;
+}
+#warp .control .other .time {
+  width: 120px;
+  height: 25px;
+  font-size: 12px;
+  color: white;
+  line-height: 25px;
+  margin-left: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#warp .control .other .sound {
+  width: 80px;
+  height: 25px;
+  margin: 0 30px 0 120px;
+}
+#warp .control .other .sound .switch {
+  width: 20px;
+  text-align: center;
+  float: left;
+}
+#warp .control .other .sound .switch > span {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin: 7px auto;
+  background: url(../img/icon.png) no-repeat 0px -34px;
+}
+#warp .control .other .sound .switch > span.active {
+  background: url(../img/icon.png) no-repeat 0px -46px;
+}
+#warp .control .other .sound .progress {
+  width: 60px;
+  height: 25px;
+  float: right;
+  position: relative;
+}
+#warp .control .other .sound .progress .wrap {
+  width: 100%;
+  height: 3px;
+  background: #7e8c8d;
+  margin-top: 11px;
+  position: absolute;
+}
+#warp .control .other .sound .progress .wrap .inner {
+  position: absolute;
+  width: 9px;
+  height: 7px;
+  border-radius: 30%;
+  background: yellow;
+  margin-top: -2px;
+}
+#warp .control .other .sound .progress .dropbtn {
+  width: 0px;
+  height: 3px;
+  margin-top: 11px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: deeppink;
+}
+#warp .control .other .full_screen {
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+#warp .control .other .full_screen > span {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-top: 7px;
+  background: url(../img/icon.png) no-repeat 0px -58px;
+}
+#warp .control .other .full_screen > span.active {
+  background: url(../img/icon.png) no-repeat 0px -69px;
+}

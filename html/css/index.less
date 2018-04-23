@@ -1,0 +1,131 @@
+@import "reset.less";
+.progress-fun(){
+  position: relative;
+  .wrap{
+    width: 100%;
+    height: 3px;
+    background: #7e8c8d;
+    margin-top: 11px;
+    position: absolute;
+    .inner{
+      position: absolute;
+      width: 9px;
+      height: 7px;
+      border-radius: 30%;
+      background: yellow;
+      margin-top: -2px;
+    }
+  }
+  .dropbtn{
+    width: 0px;
+    height: 3px;
+    margin-top: 11px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: deeppink;
+  }
+}
+#warp{
+  height: 100%;
+  font-size: 0;
+  background: #383838;
+  overflow-x:auto;
+  overflow-y:hidden;
+      .control{
+        min-width: 600px;
+        height: 25px;
+        background: #2A2A2A;
+        position: relative;
+        .btn{
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 55px;
+          height: 25px;
+          & > span{
+            display: inline-block;
+            width: 9px;
+            height: 11px;
+            background: url(../img/icon.png) no-repeat;
+            margin-top: 7px;
+            &:nth-child(1){
+              background-position:0 -23px ;
+              margin:0 10px;
+              &.active{
+                background-position:0 -11px ;
+              }
+            }
+
+          }
+        }
+        & >.progress{
+          height: 100%;
+          margin: 0 230px 0 55px;
+          .progress-fun()
+        }
+        .other{
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 230px;
+          height: 25px;
+          .time{
+            width: 120px;
+            height: 25px;
+            font-size: 12px;
+            color: white;
+            line-height: 25px;
+            margin-left: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          .sound{
+            width: 80px;
+            height: 25px;
+            margin: 0 30px 0 120px;
+            .switch{
+              width: 20px;
+              text-align: center;
+              float: left;
+              &>span{
+                display: inline-block;
+                height: 12px;
+                width: 12px;
+                margin: 7px auto;
+                background: url(../img/icon.png) no-repeat 0px -34px;
+                &.active{
+                  background: url(../img/icon.png) no-repeat 0px -46px;
+                }
+              }
+            }
+             .progress{
+              width: 60px;
+               height: 25px;
+               float: right;
+              .progress-fun();
+            }
+          }
+          .full_screen{
+            width: 30px;
+            height: 25px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            &>span{
+              display: inline-block;
+              width: 11px;
+              height: 11px;
+              margin-top: 7px;
+              background: url(../img/icon.png) no-repeat 0px -58px;
+              &.active{
+                background: url(../img/icon.png) no-repeat 0px -69px;
+              }
+            }
+          }
+        }
+      }
+}
