@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,
+    initial-scale=1.0, maximum-scale=1.0,
+     user-scalable=0" name="viewport"/>
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+            overflow: hidden;
+        }
+        #div,ul,ul li{
+            height: 100%;
+        }
+        ul li{
+            background: url(img/b.png);
+            background-size: 100% 100%;
+        }
+        #test{
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 2s;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById('test')
+            //设置画布宽高
+            canvas.width = document.documentElement.clientWidth
+            canvas.height = document.documentElement.clientHeight
+
+            if(canvas.getContext){
+                var ctx = canvas.getContext('2d')
+                var img = new Image()
+                img.src = 'img/a.png'
+
+                img.onload = function () {
+                    draw()
+                }
+
+                function draw() {
+                    ctx.drawImage(img,0,0,canvas.width,canvas.height)
+                    canvas.addEventListener('touchstart',function (ev) {
+                        ev = ev || event
+                        var touch = ev.changedTouches[0]//得到第一个手指触摸事件
+                        var x = touch.clientX - canvas.offsetLeft
+                        var y = touch.clientY - canvas.offsetTop
+
+
+                        ctx.globalCompositeOperation = 'destination-out'
+                        ctx.lineWidth = 40
+                        ctx.lineCap = 'round'
+                        ctx.lineJoin = 'round'
+                        ctx.beginPath()
+                        ctx.moveTo(x,y)
+                        ctx.lineTo(x+1,y+1)
+                        ctx.stroke()
+                        ctx.restore()
+                    })
+
+                    canvas.addEventListener('touchmove',function (ev) {
+                        ev = ev || event
+                        var touch = ev.changedTouches[0]//得到第一个手指触摸事件
+                        var x = touch.clientX - canvas.offsetLeft
+                        var y = touch.clientY - canvas.offsetTop
+
+                        ctx.lineTo(x,y)
+                        ctx.stroke()
+                        ctx.restore()
+                    })
+                    
+                    canvas.addEventListener('touchend',function () {
+                        var imgdata = ctx.getImageData(0,0,canvas.width,canvas.height)
+                        var allpx = imgdata.width * imgdata.height
+                        var flag = 0
+                        for (var i=0;i<allpx;i++){
+                            if (imgdata.data[4*i+3]===0){//计算画布上的透明像素
+                                flag++
+                            }
+                        }
+                        if (flag>allpx/2){
+                            canvas.style.opacity = 0//布上的透明像素大于画布上的像素1/2时，使其全部透明
+                        }
+                    })
+
+                    canvas.addEventListener('transitionend',function () {
+                        this.remove()
+                    })
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+      <div id="div">
+          <canvas id="test"></canvas>
+          <ul>
+              <li></li>
+          </ul>
+      </div>
+
+</body>
+</html>
