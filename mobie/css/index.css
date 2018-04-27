@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+*:not(input,textarea) {
+  -webkit-touch-callout: inherit;
+  -webkit-user-select: auto;
+}
+body {
+  width: 100%;
+  font-family: Hiragino Sans GB, Arial, Helvetica, "����", sans-serif;
+  font-size: 14px;
+  color: #878787;
+  -webkit-touch-callout: inherit ;
+  -webkit-user-select: auto ;
+  background-color: #fff;
+}
+a {
+  color: #878787;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:hover {
+  text-decoration: none;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+dt,
+dd {
+  display: inline-block;
+}
+textarea,
+input {
+  resize: none;
+  outline: none;
+}
+textarea {
+  resize: none;
+  -webkit-appearance: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+em {
+  font-style: normal;
+}
+.pt-page-moveToLeft {
+  -webkit-animation: moveToLeft .6s ease both;
+  animation: moveToLeft .6s ease both;
+}
+.pt-page-moveFromLeft {
+  -webkit-animation: moveFromLeft .6s ease both;
+  animation: moveFromLeft .6s ease both;
+}
+.pt-page-moveToRight {
+  -webkit-animation: moveToRight .6s ease both;
+  animation: moveToRight .6s ease both;
+}
+.pt-page-moveFromRight {
+  -webkit-animation: moveFromRight .6s ease both;
+  animation: moveFromRight .6s ease both;
+}
+.pt-page-moveToTop {
+  -webkit-animation: moveToTop .6s ease both;
+  animation: moveToTop .6s ease both;
+}
+.pt-page-moveFromTop {
+  -webkit-animation: moveFromTop .6s ease both;
+  animation: moveFromTop .6s ease both;
+}
+.pt-page-moveToBottom {
+  -webkit-animation: moveToBottom .6s ease both;
+  animation: moveToBottom .6s ease both;
+}
+.pt-page-moveFromBottom {
+  -webkit-animation: moveFromBottom .6s ease both;
+  animation: moveFromBottom .6s ease both;
+}
+/*定义四个方向动画的实现过程*/
+@-webkit-keyframes moveToLeft {
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+@keyframes moveToLeft {
+  to {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes moveFromLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+  }
+}
+@keyframes moveFromLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes moveToRight {
+  to {
+    -webkit-transform: translateX(100%);
+  }
+}
+@keyframes moveToRight {
+  to {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes moveFromRight {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+}
+@keyframes moveFromRight {
+  from {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes moveToTop {
+  to {
+    -webkit-transform: translateY(-100%);
+  }
+}
+@keyframes moveToTop {
+  to {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+@-webkit-keyframes moveFromTop {
+  from {
+    -webkit-transform: translateY(-100%);
+  }
+}
+@keyframes moveFromTop {
+  from {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+@-webkit-keyframes moveToBottom {
+  to {
+    -webkit-transform: translateY(100%);
+  }
+}
+@keyframes moveToBottom {
+  to {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+@-webkit-keyframes moveFromBottom {
+  from {
+    -webkit-transform: translateY(100%);
+  }
+}
+@keyframes moveFromBottom {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+.p-moveToLeft {
+  animation: moveToLeft 1s both;
+}
+@keyframes moveToLeft {
+  from {
+    transform: translateX(-100%);
+  }
+}
+.p-moveToRight {
+  animation: moveToRight 1s both;
+}
+@keyframes moveToRight {
+  from {
+    transform: translateX(100%);
+  }
+}
+.img-moveTo1 {
+  animation: moveTo1 1s both;
+}
+@keyframes moveTo1 {
+  to {
+    transform: translateY(-150%) rotate(720deg) scale(0.8);
+  }
+}
+.img-moveTo2 {
+  animation: moveTo2 1s both;
+}
+@keyframes moveTo2 {
+  to {
+    transform: translateY(150%) rotate(720deg) scale(0.8);
+  }
+}
+.img-moveTo3 {
+  animation: moveTo3 1s both;
+}
+@keyframes moveTo3 {
+  to {
+    transform: translateX(-150px) rotate(720deg) scale(0.8);
+  }
+}
+.img-moveTo4 {
+  animation: moveTo4 1s both;
+}
+@keyframes moveTo4 {
+  to {
+    transform: translateX(150%) rotate(720deg) scale(0.8);
+  }
+}
+.musicRotate {
+  animation: music 1s both infinite linear;
+}
+@keyframes music {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.img-rotate {
+  animation: imgrotate 1s both;
+}
+@keyframes imgrotate {
+  to {
+    transform: rotateY(720deg);
+  }
+}
+.arr-rotate {
+  animation: arrrotate 1s both infinite linear;
+}
+@keyframes arrrotate {
+  50% {
+    transform: translateY(-100%);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+* {
+  touch-action: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.hide {
+  display: none;
+}
+#main > page-4 > ul2 li.active {
+  width: 0;
+  height: 0;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#main #canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 2s;
+  z-index: 100;
+}
+#main #music > img {
+  width: auto;
+  height: 30px;
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  z-index: 99;
+}
+#main .arr > img {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  margin-left: -25px;
+  z-index: 99;
+}
+#main .page-1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../img/b.png) no-repeat;
+  background-size: 100% 100%;
+}
+#main .page-1 .ul {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  left: 20%;
+  top: 65%;
+}
+#main .page-2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../img/c.png) no-repeat;
+  background-size: 100% 100%;
+}
+#main .page-2 > img {
+  width: auto;
+  height: 90px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -45px;
+}
+#main .page-3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../img/d.png) no-repeat;
+  background-size: 100% 100%;
+}
+#main .page-3 > img {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-left: -150px;
+}
+#main .page-4 {
+  width: 100%;
+  height: 100%;
+  background: url(../img/e.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+}
+#main .page-4 > .ul2 {
+  width: 100%;
+  height: 100%;
+}
+#main .page-4 > .ul2 > li {
+  font-size: 15px;
+  color: white;
+  border: 1px #FFF solid;
+  box-shadow: 0 0 15px #FFF;
+  border-radius: 5px;
+  word-wrap: break-word;
+  position: absolute;
+  transition: 1s;
+  overflow: hidden;
+}
+#main .page-4 > .ul2 > li:nth-child(1) {
+  width: 40%;
+  height: 25%;
+  left: 4%;
+  top: 15%;
+}
+#main .page-4 > .ul2 > li:nth-child(2) {
+  width: 45%;
+  height: 20%;
+  left: 50%;
+  top: 19%;
+}
+#main .page-4 > .ul2 > li:nth-child(3) {
+  width: 20%;
+  height: 27%;
+  left: 78%;
+  top: 40%;
+}
+#main .page-5 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../img/f.png) no-repeat;
+  background-size: 100% 100%;
+}

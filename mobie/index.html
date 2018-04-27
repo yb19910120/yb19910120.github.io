@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+<div id="main">
+    <canvas id="canvas"></canvas>
+    <div id="music">
+         <img src="img/music.png" class="musicRotate"/>
+        <audio id="a1" src="img/music.mp3" preload="auto" loop></audio>
+    </div>
+    <div class="page page-1">
+        <ul class="ul">
+            <li class="p-moveToLeft hide"><p>曾经做为前端开发的你</p>
+                <p>解决PC兼容性而焦头烂额</p></li>
+            <li class="p-moveToRight hide"><p>而今</p>
+                <p>移动端H5应用疯狂来袭</p></li>
+            <li class="p-moveToLeft hide"><p>你是否已准备充分</p>
+                <p>学习新技能</p></li>
+            <li class="p-moveToRight hide"><p>曾破茧成蝶、重获新生？</p></li>
+        </ul>
+    </div>
+    <div class="page page-2 hide">
+        <img src="img/c1.png" class="img-moveTo1"/>
+        <img src="img/c5.png" class="img-moveTo2"/>
+        <img src="img/c3.png" class="img-moveTo3"/>
+        <img src="img/c6.png" class="img-moveTo4"/>
+    </div>
+    <div class="page page-3 hide">
+        <img src="img/d1.png" class="img-rotate"/>
+    </div>
+    <div class="page page-4 hide">
+        <ul class="ul2">
+            <li class="active">transform transition rotate scale translate keyframes animation webkitTransitionEnd
+                webkitAnimationIteration elapsedTime perspective…
+            </li>
+            <li class="active">drawImage lineWidth strokeStyle lineCap globalCompositeOperation moveTo lineTo stroke arc
+                getImageData…
+            </li>
+            <li class="active">audio autoplay loop paused play pause…</li>
+        </ul>
+    </div>
+    <div class="page page-5 hide"></div>
+    <div class="arr">
+        <img src="img/arr.png" class="arr-rotate"/>
+    </div>
+
+
+
+</div>
+<script src="js/zepto.js"></script>
+<script src="js/touch.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
